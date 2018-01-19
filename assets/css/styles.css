@@ -1,0 +1,183 @@
+
+ body {
+ 	width: 75%;
+	margin: 0 auto; 
+
+	display: flex;
+	min-height: 100vh;
+	flex-direction: column;
+	background-color: white;
+ }
+
+ #weird_burger {
+ 	display: block;
+    margin: auto;
+ }
+
+ h1 {
+ 	text-align: center;
+ 	font-family: 'Fontdiner Swanky', cursive;
+ 	font-size: 65px;
+ 	margin: 50px;
+ }
+
+ .burgerAvailable {
+ 	font-family: 'Crafty Girls', cursive;
+ 	font-weight: normal;
+ 	font-size: 20px;
+ 	text-align: center;
+
+ 	border-radius: 25px;
+ 	width: 100%;
+ 	margin: 10px;
+ 	padding: 10px;
+ 	background-color: #b7ffc2;
+ 	border: none;
+ }
+
+ .burgerAvailable:hover {
+ 	background-color: #81ff94;
+ }
+
+ .burgerEaten {
+ 	font-weight: normal;
+ 	font-size: 20px;
+ 	text-align: center;
+
+ 	border-radius: 25px;
+ 	margin: 10px;
+ 	padding: 10px;
+ 	background-color: #ffd1c9;
+ }
+
+ h2 {
+  	text-align: center;
+ 	font-family: 'Fontdiner Swanky', cursive;
+ 	font-size: 40px;
+ 	margin: 50px;
+ }
+
+ .formContainer {
+ 	background-color: orange;
+ }
+
+ .addBurgerButton {
+ 	font-family: 'Crafty Girls', cursive;
+ 	font-weight: normal;
+ 	font-size: 20px;
+ 	text-align: center;
+
+ 	border-radius: 25px;
+ 	width: 100%;
+ 	margin: 0;
+ 	padding: 10px;
+ 	background-color: #FFC04C;
+ 	border: none;
+ }
+
+.addBurgerButton:active {
+	background-color: #FFC04C;
+}
+
+
+    button,
+    div,
+    form,
+    input {
+      margin: 10px;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        color: teal;
+
+    }
+
+    .myButton {
+        margin-right: 2px;
+        margin-bottom: 2px;
+        max-width: 220px;
+     
+    }
+
+    .myFooter {
+
+    }
+
+    .myTinyImage {
+        margin-left: 5px;
+        margin-right: 5px;
+        margin-top: 0px;
+        vertical-align: text-top;
+    }
+    .myCard {
+        min-height: 450px;
+    }
+
+    .myCardContent {
+        padding:15px !important;
+    }
+
+    #mySignature {
+        font-size: 1.1em;
+    }
+
+    /* media queries for responsive text in footer*/
+
+    /*phone only*/
+    @media only screen and (max-width: 599px) {
+        #mySignature {
+            font-size: .5em;
+            margin-bottom: 0px;
+
+        }
+        .myCopyright {
+            min-height: 20px !important;
+            position: relative;
+            top: 10px;
+        }
+        .myTinyImage {
+            display: none;
+        }
+        .myFooter{
+            height: 75px;
+            min-height: 0px !important;
+        }
+        .myCard {
+            min-height: 400px;
+        }
+
+        .myGif {
+            display: inline;
+        }
+
+    }
+
+    /*tablets, desktop*/
+    @media only screen and (min-width: 1024px) {
+        
+
+        #mySignature {
+        font-size: 1.1em;
+         }
+
+        .myCopyright {
+            min-height: 20px !important;
+            /*position: relative;
+            top: 10px;*/
+        }
+        .myTinyImage {
+            margin-left: 5px;
+            margin-right: 5px;
+            margin-top: 0px;
+            vertical-align: text-top;
+        }
+        .myFooter{
+            height: 75px;
+            min-height: 36px !important;
+        }
+
+        .myCard {
+            min-height: 730px;
+        }
+
+    }
