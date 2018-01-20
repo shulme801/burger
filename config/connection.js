@@ -4,11 +4,12 @@ var mysql = require('mysql');
 // Now, we create the MySQL connection object
 var connection;
 
+//The following code is from the Heroku deployment process instructions for MySQL
 if (process.env.JAWSDB_URL) {
-	// DB is JawsDB on Heroku
+	// We're on Heroku and will let MySQL's createConnection connect us, using the JawsDB URL that's in our process environment
 	connection = mysql.createConnection(process.env.JAWSDB_URL);
 } else {
-	// we're operating on localhost. So set your database port to 3306
+	// else we are running on our old friend localhost. Use the standard 3306 port
 	connection = mysql.createConnection({
 		port: 3306,
 		host: 'localhost',

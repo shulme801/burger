@@ -29,20 +29,20 @@ var orm = {
 		// Construct the query string that returns all rows from the target table
 		var queryString = "SELECT * FROM " + tableInput + ";";
 
-		// Perform the database query
+		// Perform the database query that we built into queryString and return the results in...result!
 		connection.query(queryString, function(err, result) {
 			if (err) {
 				throw err;
 			}
 
-			// Return results in callback
+			// The callback function returns the result
 			cb(result);
 		});
 	},
 
-	// Function that insert a single table entry
+	// Function that inserts one row into a table. "cb" is, as usual, our trusty callback function
 	insertOne: function(table, cols, vals, cb) {
-		// Construct the query string that inserts a single row into the target table
+		// Construct a query to insert one row into the table
 		var queryString = "INSERT INTO " + table;
 
 		queryString += " (";
@@ -52,20 +52,18 @@ var orm = {
 		queryString += printQuestionMarks(vals.length);
 		queryString += ") ";
 
-		// console.log(queryString);
-
-		// Perform the database query
+		// Query database now
 		connection.query(queryString, vals, function(err, result) {
 			if (err) {
 				throw err;
 			}
 
-			// Return results in callback
+			// The callback function returns the result
 			cb(result);
 		});
 	},
 
-	// Function that updates a single table entry
+	// Function to update one row in the table
 	updateOne: function(table, objColVals, condition, cb) {
 		// Construct the query string that updates a single entry in the target table
 		var queryString = "UPDATE " + table;
@@ -75,19 +73,18 @@ var orm = {
 		queryString += " WHERE ";
 		queryString += condition;
 
-		// console.log(queryString);
 
-		// Perform the database query
+		// Query database now
 		connection.query(queryString, function(err, result) {
 			if (err) {
 				throw err;
 			}
 
-			// Return results in callback
+			// The callback function returns the result
 			cb(result);
 		});
 	}
 };
 
-// Export the orm object for use in other modules
+// Export the Object Relational Model so other modules can use it
 module.exports = orm;

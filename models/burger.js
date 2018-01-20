@@ -1,7 +1,7 @@
-// Import the ORM to implement functions that will interact with the database
+// Import the Object Relational Model -- orm.js contails the CRUD functions that interact with the database 
 var orm = require('../config/orm.js');
 
-// Create the burger object
+// Create hamburger object
 var burger = {
   // Select all burger table entries
   selectAll: function(cb) {
@@ -10,14 +10,14 @@ var burger = {
     });
   },
 
-  // The variables cols and vals are arrays
+  // This function calls the ORM single insert function.
   insertOne: function(cols, vals, cb) {
     orm.insertOne('burgers', cols, vals, function(res) {
       cb(res);
     });
   },
 
-  // The objColVals is an object specifying columns as object keys with associated values
+  // objColVals is an object specifying columns as object keys with associated values
   updateOne: function(objColVals, condition, cb) {
     orm.updateOne('burgers', objColVals, condition, function(res) {
       cb(res);
@@ -25,5 +25,5 @@ var burger = {
   }
 };
 
-// Export the database functions for the controller (burgerController.js).
+// Export the database functions for use by burgers_controller.js, which is the overall controller driver
 module.exports = burger;
