@@ -20,7 +20,6 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 app.use('/',routes); //use the routes provided in burgers_controller.js
 
 app.use (express.static(process.cwd() + '/public')); //static content would be served up from the public directory
-// Starts the server to begin listening
 
 var exphbs = require('express-handlebars');
 
@@ -28,7 +27,7 @@ app.engine('handlebars', exphbs({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
 
-
+//and let's start the app, listening on the correct PORT (either from the process environment or 8080 if we're on localhost)
 app.listen(PORT, function() {
   console.log("Hamburger Helper App listening on PORT " + PORT);
 });

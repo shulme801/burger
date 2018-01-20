@@ -1,7 +1,7 @@
 // Import the Object Relational Model -- orm.js contails the CRUD functions that interact with the database 
 var orm = require('../config/orm.js');
 
-// Create hamburger object
+// Create a hamburger object
 var burger = {
   // Select all burger table entries
   selectAll: function(cb) {

@@ -11,12 +11,12 @@ router.get('/', function(req, res) {
     var hbsObject = {
       burgers: data
     };
-    // console.log(hbsObject);
+     
     res.render('index', hbsObject);
   });
 });
 
-router.post('/burgers', function(req, res) {
+router.post('/burger', function(req, res) {
   burger.insertOne([
     'burger_name'
   ], [
@@ -26,7 +26,7 @@ router.post('/burgers', function(req, res) {
   });
 });
 
-router.put('/burgers/:id', function(req, res) {
+router.put('/burger/:id', function(req, res) {
   var condition = 'id = ' + req.params.id;
 
   burger.updateOne({
