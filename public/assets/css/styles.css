@@ -1,6 +1,6 @@
 
  body {
- 	width: 75%;
+
 	margin: 0 auto; 
 
 	display: flex;
@@ -9,10 +9,6 @@
 	background-color: white;
  }
 
- #weird_burger {
- 	display: block;
-    margin: auto;
- }
 
  h1 {
  	text-align: center;
@@ -20,6 +16,10 @@
  	font-size: 65px;
  	margin: 50px;
  }
+
+ul {
+  list-style-type: none;
+}
 
  .burgerAvailable {
  	font-family: 'Crafty Girls', cursive;
@@ -57,9 +57,6 @@
  	margin: 50px;
  }
 
- .formContainer {
- 	background-color: orange;
- }
 
  .addBurgerButton {
  	font-family: 'Crafty Girls', cursive;
