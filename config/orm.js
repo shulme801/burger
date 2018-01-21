@@ -16,7 +16,7 @@ function objToSql(myObj) {
 	var arr = [];
 
 	for (var key in myObj) {
-		arr.push(key + "=" + myObjm [key]);
+		arr.push(key + "=" + myObj [key]);
 	}
 
 	return arr.toString();
